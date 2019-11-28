@@ -134,6 +134,6 @@ extension MainViewController: UITableViewDelegate {
 
 extension MainViewController: NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChangeContentWith snapshot: NSDiffableDataSourceSnapshotReference) {
-        self.dataSource.applySnapshot(snapshot, animatingDifferences: self.dataSource.snapshot().numberOfSections > 0)
+        self.dataSource.applySnapshot(snapshot, animatingDifferences: self.dataSource.snapshot().numberOfItems > 0)
     }
 }
