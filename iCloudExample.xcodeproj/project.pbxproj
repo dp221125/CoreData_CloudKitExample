@@ -14,10 +14,7 @@
 		C368E55B238E027400B8E71E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C368E55A238E027400B8E71E /* Assets.xcassets */; };
 		C368E55E238E027400B8E71E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C368E55C238E027400B8E71E /* LaunchScreen.storyboard */; };
 		C368E568238E2ECD00B8E71E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C368E567238E2ECD00B8E71E /* CloudKit.framework */; };
-		C368E56C238E4BDF00B8E71E /* CellList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368E56B238E4BDF00B8E71E /* CellList.swift */; };
 		C368E570238E4BFD00B8E71E /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368E56F238E4BFD00B8E71E /* MainViewCell.swift */; };
-		C368E572238E4C4F00B8E71E /* LocalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368E571238E4C4F00B8E71E /* LocalList.swift */; };
-		C368E575238E4C6600B8E71E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C368E574238E4C6600B8E71E /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +28,7 @@
 		C368E55F238E027400B8E71E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C368E565238E2ECA00B8E71E /* iCloudExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCloudExample.entitlements; sourceTree = "<group>"; };
 		C368E567238E2ECD00B8E71E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		C368E56B238E4BDF00B8E71E /* CellList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellList.swift; sourceTree = "<group>"; };
 		C368E56F238E4BFD00B8E71E /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
-		C368E571238E4C4F00B8E71E /* LocalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalList.swift; sourceTree = "<group>"; };
-		C368E574238E4C6600B8E71E /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +63,15 @@
 		C368E54D238E027300B8E71E /* iCloudExample */ = {
 			isa = PBXGroup;
 			children = (
-				C368E573238E4C5E00B8E71E /* extension */,
-				C368E56D238E4BEE00B8E71E /* View */,
-				C368E56A238E4BC800B8E71E /* enum */,
-				C368E569238E4B5300B8E71E /* Resource */,
+				C368E565238E2ECA00B8E71E /* iCloudExample.entitlements */,
+				C368E54E238E027300B8E71E /* AppDelegate.swift */,
+				C368E550238E027300B8E71E /* SceneDelegate.swift */,
 				C368E552238E027300B8E71E /* MainViewController.swift */,
+				C368E56F238E4BFD00B8E71E /* MainViewCell.swift */,
+				C368E55A238E027400B8E71E /* Assets.xcassets */,
+				C368E55C238E027400B8E71E /* LaunchScreen.storyboard */,
+				C368E55F238E027400B8E71E /* Info.plist */,
+				C368E557238E027300B8E71E /* iCloudExample.xcdatamodeld */,
 			);
 			path = iCloudExample;
 			sourceTree = "<group>";
@@ -84,53 +82,6 @@
 				C368E567238E2ECD00B8E71E /* CloudKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C368E569238E4B5300B8E71E /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				C368E565238E2ECA00B8E71E /* iCloudExample.entitlements */,
-				C368E54E238E027300B8E71E /* AppDelegate.swift */,
-				C368E550238E027300B8E71E /* SceneDelegate.swift */,
-				C368E55A238E027400B8E71E /* Assets.xcassets */,
-				C368E55C238E027400B8E71E /* LaunchScreen.storyboard */,
-				C368E55F238E027400B8E71E /* Info.plist */,
-				C368E557238E027300B8E71E /* iCloudExample.xcdatamodeld */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		C368E56A238E4BC800B8E71E /* enum */ = {
-			isa = PBXGroup;
-			children = (
-				C368E56B238E4BDF00B8E71E /* CellList.swift */,
-				C368E571238E4C4F00B8E71E /* LocalList.swift */,
-			);
-			path = enum;
-			sourceTree = "<group>";
-		};
-		C368E56D238E4BEE00B8E71E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C368E56E238E4BF100B8E71E /* Cell */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C368E56E238E4BF100B8E71E /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				C368E56F238E4BFD00B8E71E /* MainViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		C368E573238E4C5E00B8E71E /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				C368E574238E4C6600B8E71E /* DateExtension.swift */,
-			);
-			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,12 +156,9 @@
 			files = (
 				C368E553238E027300B8E71E /* MainViewController.swift in Sources */,
 				C368E54F238E027300B8E71E /* AppDelegate.swift in Sources */,
-				C368E572238E4C4F00B8E71E /* LocalList.swift in Sources */,
-				C368E575238E4C6600B8E71E /* DateExtension.swift in Sources */,
 				C368E559238E027300B8E71E /* iCloudExample.xcdatamodeld in Sources */,
 				C368E570238E4BFD00B8E71E /* MainViewCell.swift in Sources */,
 				C368E551238E027300B8E71E /* SceneDelegate.swift in Sources */,
-				C368E56C238E4BDF00B8E71E /* CellList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,12 +294,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iCloudExample/Resource/iCloudExample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iCloudExample/iCloudExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = 5BY5MQ6875;
+				DEVELOPMENT_TEAM = "";
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
-				INFOPLIST_FILE = iCloudExample/Resource/Info.plist;
+				INFOPLIST_FILE = iCloudExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,12 +316,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iCloudExample/Resource/iCloudExample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iCloudExample/iCloudExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = 5BY5MQ6875;
+				DEVELOPMENT_TEAM = "";
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
-				INFOPLIST_FILE = iCloudExample/Resource/Info.plist;
+				INFOPLIST_FILE = iCloudExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

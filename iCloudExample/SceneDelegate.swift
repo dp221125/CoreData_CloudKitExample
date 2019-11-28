@@ -9,22 +9,22 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let scene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow()
-        window.windowScene = scene
+        guard let scene = scene as? UIWindowScene else {
+            preconditionFailure()
+        }
+        let window = UIWindow(windowScene: scene)
         self.window = window
-        let mainViewController = UINavigationController(rootViewController: MainViewController())
-        self.window?.rootViewController = mainViewController
-        self.window?.makeKeyAndVisible()
+        window.rootViewController = UINavigationController(rootViewController: MainViewController())
+        window.makeKeyAndVisible()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            preconditionFailure()
+        }
+        delegate.saveContext()
     }
-
 }
-
