@@ -11,8 +11,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     var fetchedResults: NSFetchedResultsController<ToDo>!
+    var dataSource: UITableViewDiffableDataSourceReference!
 
-    var tableView: UITableView {
+    private var tableView: UITableView {
         guard let tableView = self.view as? UITableView else {
             preconditionFailure()
         }
@@ -71,7 +72,7 @@ class MainViewController: UIViewController {
         }
     }
 
-    var dataSource: UITableViewDiffableDataSourceReference!
+  
 
     @objc
     func addButtonPressed(_ sender: UIBarButtonItem) {
